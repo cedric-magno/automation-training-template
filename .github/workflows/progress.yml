@@ -1,0 +1,37 @@
+name: Auto Progress Tracker
+
+on:
+  push:
+    paths:
+      - "Automation Training Plan.md"
+      - "scripts/checkbox-tracker.js"
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Run checkbox progress tracker
+        run: node scripts/checkbox-tracker.js
+
+      - name: Commit updated progress files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add .github/progress-*.json
+
+          git commit -m "📊 Auto-update progress badges" || echo "No changes"
+
+          git push
