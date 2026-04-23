@@ -100,15 +100,15 @@ If something doesn't work:
 ## 🟢 DAY 1 - Variables + Console - COMPLETED
 
 ### LEARN:
-- [x] What is a variable?
-- [x] Difference between const and let
+- [ ] What is a variable?
+- [ ] Difference between const and let
 
 ### DO:
-- [x] Create variables: username, password, isLoggedIn
-- [x] Print them using console.log
+- [ ] Create variables: username, password, isLoggedIn
+- [ ] Print them using console.log
 
 ### EXERCISE:
-- [x] Change values and observe output
+- [ ] Change values and observe output
 
 ```
 const username = "admin";
@@ -121,8 +121,8 @@ console.log(isLoggedIn);
 ```
 
 ### OUTPUT:
-- [x] 5+ variables created
-- [x] 1 JS file committed
+- [ ] 5+ variables created
+- [ ] 1 JS file committed
 
 ### Notes:
 Reference: Grammars and types  
@@ -142,15 +142,15 @@ Reference: Grammars and types
 ## 🟢 DAY 2 - Functions (CORE) - COMPLETED
 
 ### LEARN:
-- [x] What is a function?
-- [x] Parameters and return values
+- [ ] What is a function?
+- [ ] Parameters and return values
 
 ### DO:
-- [x] Create function login(username, password)
-- [x] Return true if credentials match
+- [ ] Create function login(username, password)
+- [ ] Return true if credentials match
 
 ### EXERCISE:
-- [x] Create:
+- [ ] Create:
   - validateUser
   - logout
 
@@ -170,7 +170,7 @@ console.log(login("wrong", "1234")); // false
 ```
 
 ### OUTPUT:
-- [x] 3 working functions
+- [ ] 3 working functions
 
 ### Notes:
 Reference: Functions  
@@ -180,16 +180,16 @@ Reference: Functions
 ## 📅 DAY 3 - Arrays
 
 ### LEARN:
-- [x] Arrays and looping concepts
-- [x] map() and filter()
+- [ ] Arrays and looping concepts
+- [ ] map() and filter()
 
 ### DO:
-- [x] Create array of users
-- [x] Extract usernames using map()
+- [ ] Create array of users
+- [ ] Extract usernames using map()
 
 ### EXERCISE:
-- [x] Filter active users
-- [x] Count users
+- [ ] Filter active users
+- [ ] Count users
 
 ```
 const users = [
@@ -202,7 +202,7 @@ console.log(activeUsers);
 ```
 
 ### OUTPUT:
-- [x] 3 array operations
+- [ ] 3 array operations
 
 ---
 
