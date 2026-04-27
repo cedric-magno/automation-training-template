@@ -33,7 +33,7 @@ training workspace**.
     - Go to your forked repo
     - Click Settings
     - Under Repository name, change it to:
-    ````
+    ```
     automation-training-[YOUR-NAME]
     ```
     - Example:
