@@ -101,8 +101,12 @@ If something doesn't work:
 
 ### LEARN:
 - [ ] What is a variable?
+  👉 https://javascript.info/variables
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations
 - [ ] Difference between const and let
-
+  👉 https://javascript.info/variables#modern-variable-declaration
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 ### DO:
 - [ ] Create variables: username, password, isLoggedIn
 - [ ] Print them using console.log
@@ -143,7 +147,11 @@ Reference: Grammars and types
 
 ### LEARN:
 - [ ] What is a function?
+  👉 https://javascript.info/function-basics
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 - [ ] Parameters and return values
+  👉 https://javascript.info/function-basics#parameters
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/return
 
 ### DO:
 - [ ] Create function login(username, password)
@@ -181,7 +189,12 @@ Reference: Functions
 
 ### LEARN:
 - [ ] Arrays and looping concepts
+  👉 https://javascript.info/array
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 - [ ] map() and filter()
+  👉 https://javascript.info/array-methods#map
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ### DO:
 - [ ] Create array of users
@@ -210,7 +223,11 @@ console.log(activeUsers);
 
 ### LEARN:
 - [ ] Object structure
+  👉 https://javascript.info/object
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 - [ ] Accessing properties
+  👉 https://javascript.info/object#property-values
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors
 
 ### DO:
 - [ ] Create user object:
@@ -240,6 +257,8 @@ console.log(user);
 
 ### LEARN:
 - [ ] Real-world data structures
+  👉 https://javascript.info/array-of-objects
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties
 
 ### DO:
 - [ ] Create test data:
@@ -268,7 +287,11 @@ console.log(admins);
 
 ### LEARN:
 - [ ] What is async/await?
+  👉 https://javascript.info/async-await
+  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 - [ ] Why async matters in testing
+  👉 https://javascript.info/promise-basics
+  👉 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
 
 ### DO:
 - [ ] Create async function returning data
@@ -316,10 +339,15 @@ getUser();
 
 Learn:
 - [ ] What is a test case?
+  👉 https://www.guru99.com/test-case.html
 - [ ] Assertion vs verification
+  👉 https://www.guru99.com/assertion-vs-verification.html
 - [ ] Positive vs negative testing
+  👉 https://www.guru99.com/positive-negative-testing.html
 - [ ] Test data management
+  👉 https://www.guru99.com/test-data-management.html
 - [ ] Flaky tests (what & why)
+  👉 https://martinfowler.com/articles/nonDeterminism.html
 
 Exercise:
 - [ ] Write 5 manual test cases for login feature
@@ -342,7 +370,9 @@ Exercise:
 
 ### LEARN:
 - [ ] What is Cypress?
+👉 https://docs.cypress.io/guides/overview/why-cypress
 - [ ] Test structure (describe, it)
+👉 https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests
 
 ### DO:
 - [ ] Install Cypress
@@ -363,7 +393,9 @@ npx cypress open
 
 ### LEARN:
 - [ ] cy.visit
+  👉 https://docs.cypress.io/api/commands/visit
 - [ ] cy.get
+  👉 https://docs.cypress.io/api/commands/get
 
 ### DO:
 - [ ] Open a demo site
@@ -412,6 +444,7 @@ cy.url().should("include", "inventory");
 
 ### LEARN:
 - [ ] Good vs bad selectors
+  👉 https://docs.cypress.io/guides/references/best-practices#Selecting-Elements
 
 ✅ Use:
 
@@ -465,6 +498,12 @@ XPath (if unstable)
 ![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week3.json)
 
 ## 📅 DAY 1 - Fixtures
+
+### LEARN:
+- [ ] Fixtures concept
+  👉 https://docs.cypress.io/api/commands/fixture
+
+### DO:
 - [ ] Create JSON test data
 - [ ] Use cy.fixture()
 
@@ -478,6 +517,12 @@ cy.fixture("users.json").then(data => {
 - [ ] External test data used
 
 ## 📅 DAY 2 - Custom Commands
+
+### LEARN:
+- [ ] Custom commands
+  👉 https://docs.cypress.io/api/cypress-api/custom-commands
+
+### DO:
 - [ ] Create cy.login()
 
 ```
@@ -493,7 +538,11 @@ Cypress.Commands.add("login", (username, password) => {
 ## 📅 DAY 3 - API Testing
 Use:
 https://jsonplaceholder.typicode.com
+
+### LEARN:
 - [ ] cy.request GET
+  👉 https://docs.cypress.io/api/commands/request
+
 
 ```
 cy.request("GET", "/posts").its("status").should("eq", 200);
@@ -503,6 +552,12 @@ cy.request("GET", "/posts").its("status").should("eq", 200);
 - [ ] API test
 
 ## 📅 DAY 4 - POST Request
+
+### LEARN:
+- [ ] POST request
+  👉 https://docs.cypress.io/api/commands/request#Arguments
+
+### DO:
 - [ ] Send POST request
 - [ ] Validate response
 ```
@@ -515,6 +570,12 @@ cy.request("POST", "/posts", {
 - [ ] API validation test
 
 ## 📅 DAY 5 - Hooks
+
+### LEARN:
+- [ ] beforeEach
+  👉 https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Hooks
+
+### DO:
 - [ ] beforeEach setup
 ```
 beforeEach(() => {
@@ -549,6 +610,14 @@ Why TypeScript?
 - Prevent bugs early
 - Better IDE support
 
+### LEARN:
+- [ ] Add types to variables
+  👉 https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+- [ ] Type functions
+  👉 https://www.typescriptlang.org/docs/handbook/2/functions.html
+- [ ] Convert Cypress tests to TS
+  👉 https://docs.cypress.io/guides/tooling/typescript-support
+
 Start SMALL:
 - Only add types to variables first
 - Don’t convert everything at once
@@ -574,7 +643,9 @@ Start SMALL:
 
 Learn:
 - [ ] What is Page Object Model (POM)?
+  👉 https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/
 - [ ] Why separate selectors?
+  👉 https://docs.cypress.io/guides/references/best-practices#Organizing-Tests-Logging-In-Controlling-State
 
 DO:
 - [ ] Create folder structure:
@@ -624,6 +695,7 @@ npm init playwright@latest
 
 Learn:
 - [ ] What is CI/CD?
+  👉 https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 CI/CD Sample:
 ```name: Run Tests
 
@@ -639,6 +711,7 @@ jobs:
 ```
 
 - [ ] Why run tests in pipeline?
+  👉 https://martinfowler.com/articles/continuousIntegration.html
 
 DO:
 - [ ] Create .github/workflows/test.yml
