@@ -340,14 +340,14 @@ getUser();
 Learn:
 - [ ] What is a test case?
   👉 https://www.guru99.com/test-case.html
-- [ ] Assertion vs verification
-  👉 https://www.guru99.com/assertion-vs-verification.html
+- [ ] Validation vs verification
+  👉 https://www.guru99.com/verification-v-s-validation-in-a-software-testing.html
 - [ ] Positive vs negative testing
-  👉 https://www.guru99.com/positive-negative-testing.html
-- [ ] Test data management
-  👉 https://www.guru99.com/test-data-management.html
+  👉 https://www.guru99.com/positive-and-negative-testing.html
+- [ ] Testing data
+  👉 https://www.guru99.com/software-testing-test-data.html
 - [ ] Flaky tests (what & why)
-  👉 https://martinfowler.com/articles/nonDeterminism.html
+  👉 https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/
 
 Exercise:
 - [ ] Write 5 manual test cases for login feature
