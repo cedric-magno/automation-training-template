@@ -10,26 +10,26 @@
 
 ## 📊 Progress Dashboard
 
-![Overall](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-overall.json)
+![Overall](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-overall.json)
 
 ### Weekly Progress
 
-![Week 0](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week0.json)
-![Week 2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week2.json)
-![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week3.json)
-![Week 4](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week4.json)
-![Week 5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week5.json)
-![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week6.json)
-![Week 7](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week7.json)
-![Week 8](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week8.json)
-![Week 9](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week9.json)
-![Week 10](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week10.json)
-![Week 11](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week11.json)
-![Week 12](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week12.json)
-![Week 13](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week13.json)
-![Week 14](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week14.json)
-![Week 15](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week15.json)
-![Week 16](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week16.json)
+![Week 0](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week0.json)
+![Week 2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week2.json)
+![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week3.json)
+![Week 4](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week4.json)
+![Week 5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week5.json)
+![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week6.json)
+![Week 7](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week7.json)
+![Week 8](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week8.json)
+![Week 9](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week9.json)
+![Week 10](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week10.json)
+![Week 11](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week11.json)
+![Week 12](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week12.json)
+![Week 13](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week13.json)
+![Week 14](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week14.json)
+![Week 15](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week15.json)
+![Week 16](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week16.json)
 
 Track your progress by checking off tasks with `[x]` as you complete them.
 
@@ -161,7 +161,7 @@ Learn:
 ---
 
 # 🔵 WEEK 0–1: JavaScript for Testers (FOUNDATION)
-![Week 0](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week0.json)
+![Week 0](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week0.json)
 
 📚 Resources: [JavaScript.info](https://javascript.info) · [MDN Web Docs](https://developer.mozilla.org)
 
@@ -558,7 +558,7 @@ Learn the theory before writing tests:
 - https://reqres.in (REST API practice)
 
 ---
-![Week 2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week2.json)
+![Week 2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week2.json)
 
 ## WEEK 2, DAY 1 – Install + First Test
 
@@ -909,7 +909,7 @@ for (const testCase of loginTestCases) {
 ---
 
 ## WEEK 3: Playwright — Forms, Navigation, and Waits
-![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week3.json)
+![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week3.json)
 
 ---
 
@@ -1224,7 +1224,7 @@ test('handle browser alert', async ({ page }) => {
 ---
 
 ## WEEK 4: Playwright — Cross-Browser + Advanced Selectors
-![Week 4](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week4.json)
+![Week 4](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week4.json)
 
 ---
 
@@ -1319,12 +1319,12 @@ test('simulate 500 server error', async ({ page }) => {
 ---
 
 # 🔵 WEEK 5–6: TypeScript + Framework Design
-![Week 5-6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week5-6.json)
+![Week 5-6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week5-6.json)
 
 ---
 
 ## WEEK 5: TypeScript for Playwright
-![Week 5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week5.json)
+![Week 5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week5.json)
 
 📚 Resources: [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook)
 
@@ -1482,7 +1482,7 @@ export class LoginPage {
 ---
 
 ## WEEK 6: Framework Design + Best Practices
-![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week6.json)
+![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week6.json)
 
 ---
 
@@ -1557,7 +1557,7 @@ reporter: [
 ---
 
 ## WEEK 7: API Testing with Playwright
-![Week 7](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week7.json)
+![Week 7](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week7.json)
 
 ### LEARN:
 - [ ] Playwright API Testing
@@ -1791,7 +1791,7 @@ npx playwright test --update-snapshots  # update baselines
 ---
 
 ## WEEK 8: Advanced Topics
-![Week 8](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week8.json)
+![Week 8](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week8.json)
 
 ---
 
@@ -1863,7 +1863,7 @@ test('login page has no accessibility violations', async ({ page }) => {
 ---
 
 # 🔴 WEEK 9: CI/CD + GitHub Actions
-![Week 9](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week9.json)
+![Week 9](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week9.json)
 
 📚 Resources:
 - [GitHub Actions Docs](https://docs.github.com/en/actions)
@@ -1999,7 +1999,7 @@ reporter: [
 ---
 
 # 🚀 WEEK 10: Portfolio Project
-![Week 10](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week10.json)
+![Week 10](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week10.json)
 
 ---
 
@@ -2059,7 +2059,7 @@ portfolio-project/
 📚 Resources: [Cypress Docs](https://docs.cypress.io)
 
 ---
-![Week 11](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week11.json)
+![Week 11](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week11.json)
 
 ## WEEK 11, DAYS 1–2 – Setup + First Test
 
@@ -2138,7 +2138,7 @@ cy.request('POST', 'https://jsonplaceholder.typicode.com/posts', {
 ---
 
 ## WEEK 12: Cypress — POM + CI/CD
-![Week 12](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week12.json)
+![Week 12](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week12.json)
 
 ### WEEK 12, DAYS 1–4 – Cypress Page Objects
 
@@ -2196,7 +2196,7 @@ jobs:
 ---
 
 ## WEEK 13: Selenium + Java Basics
-![Week 13](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week13.json)
+![Week 13](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week13.json)
 
 ### LEARN:
 - [ ] What is WebDriver?
@@ -2243,7 +2243,7 @@ public class LoginTest {
 ---
 
 ## WEEK 14: Selenium POM + TestNG
-![Week 14](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week14.json)
+![Week 14](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week14.json)
 
 ```java
 // pages/LoginPage.java
@@ -2293,7 +2293,7 @@ public class LoginTest {
 ---
 
 # ➕ SUPPLEMENTAL WEEK 15: Mobile Testing with Appium
-![Week 15](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week15.json)
+![Week 15](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week15.json)
 
 > **When to use Appium:** QA roles that test native iOS/Android apps. High-value skill, less common in pure web roles.
 
@@ -2345,7 +2345,7 @@ runTest();
 ---
 
 # ➕ SUPPLEMENTAL WEEK 16: AI-Assisted Testing
-![Week 16](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week16.json)
+![Week 16](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training-template/main/.github/progress-week16.json)
 
 > **Why this matters:** AI-augmented testing is growing fast. 70% of enterprises are expected to adopt AI testing by 2028. This is the direction the industry is heading.
 
