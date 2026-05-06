@@ -171,10 +171,7 @@ Learn:
 
 ### LEARN:
 - [ ] What is a variable?
-  👉 https://javascript.info/variables
-  👉 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
-- [ ] `const` vs `let` vs `var`
-  👉 https://javascript.info/variables#modern-variable-declaration
+- [ ] Difference between const and let
 
 ### DO:
 - [ ] Create variables: `username`, `password`, `isLoggedIn`, `attempts`
@@ -221,11 +218,7 @@ console.log(greeting);
 
 ### LEARN:
 - [ ] What is a function?
-  👉 https://javascript.info/function-basics
 - [ ] Parameters and return values
-  👉 https://javascript.info/function-basics#parameters
-- [ ] Arrow functions
-  👉 https://javascript.info/arrow-functions-basics
 
 ### DO:
 - [ ] Create `login(username, password)` returning `true` or `false`
@@ -281,10 +274,8 @@ console.log(greetUser()); // uses defaults
 ## 📅 DAY 3 – Arrays
 
 ### LEARN:
-- [ ] Arrays and looping
-  👉 https://javascript.info/array
-- [ ] `map()`, `filter()`, `find()`, `forEach()`
-  👉 https://javascript.info/array-methods
+- [ ] Arrays and looping concepts
+- [ ] map() and filter()
 
 ### DO:
 - [ ] Create an array of user objects
@@ -333,10 +324,8 @@ users.forEach(user => {
 ## 📅 DAY 4 – Objects (VERY IMPORTANT)
 
 ### LEARN:
-- [ ] Object structure and properties
-  👉 https://javascript.info/object
-- [ ] Destructuring
-  👉 https://javascript.info/destructuring-assignment
+- [ ] Object structure
+- [ ] Accessing properties
 
 ### DO:
 - [ ] Create a `user` object with multiple properties
@@ -390,18 +379,20 @@ console.log(testConfig.timeouts.medium);
 ## 📅 DAY 5 – Combine Arrays + Objects
 
 ### LEARN:
-- [ ] Arrays of objects
-  👉 https://javascript.info/array-of-objects
-- [ ] Spread operator
-  👉 https://javascript.info/rest-parameters-spread
+- [ ] Real-world data structures
 
-### EXERCISES:
-```js
-// Exercise 1: Array of test user objects
-const testUsers = [
-  { username: "standard_user",   password: "secret_sauce", expectedResult: "success" },
-  { username: "locked_out_user", password: "secret_sauce", expectedResult: "locked"  },
-  { username: "wrong_user",      password: "wrong_pass",   expectedResult: "failure" },
+### DO:
+- [ ] Create test data:
+  multiple users with roles
+
+### EXERCISE:
+- [ ] Filter admin users
+- [ ] Get usernames only
+
+```
+const users = [
+  { username: "admin", role: "admin" },
+  { username: "user1", role: "user" }
 ];
 
 // Filter for users expected to fail
@@ -432,16 +423,18 @@ console.log("Use for success test:", successUser.username);
 ## 📅 DAY 6 – Async/Await (CRITICAL FOR PLAYWRIGHT)
 
 ### LEARN:
-- [ ] Promises and async/await
-  👉 https://javascript.info/async-await
+- [ ] What is async/await?
 - [ ] Why async matters in testing
-  👉 https://javascript.info/promise-basics
 
-### EXERCISES:
-```js
-// Exercise 1: Basic Promise
-function fetchUserFromDB(id) {
-  return new Promise((resolve, reject) => {
+### DO:
+- [ ] Create async function returning data
+
+### EXERCISE:
+- [ ] Simulate API call (setTimeout or promise)
+
+```
+function fetchUser() {
+  return new Promise(resolve => {
     setTimeout(() => {
       if (id > 0) {
         resolve({ id, username: `user_${id}`, active: true });
@@ -528,28 +521,21 @@ runTests();
 
 Learn the theory before writing tests:
 - [ ] What is a test case?
-  👉 https://www.guru99.com/test-case.html
-- [ ] Validation vs Verification
-  👉 https://www.guru99.com/verification-v-s-validation-in-a-software-testing.html
-- [ ] Positive vs Negative Testing
-  👉 https://www.guru99.com/positive-and-negative-testing.html
-- [ ] Test Data
-  👉 https://www.guru99.com/software-testing-test-data.html
-- [ ] What are Flaky Tests?
-  👉 https://www.jetbrains.com/teamcity/ci-cd-guide/concepts/flaky-tests/
-- [ ] AAA Pattern (Arrange-Act-Assert)
-  👉 https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/
+- [ ] Assertion vs verification
+- [ ] Positive vs negative testing
+- [ ] Test data management
+- [ ] Flaky tests (what & why)
 
-**Exercise — Write Manual Test Cases:**
-- [ ] Write 5 manual test cases for the SauceDemo login page
-  - Use this template: `Test ID | Description | Steps | Expected Result | Actual Result | Pass/Fail`
-  - Cover: valid login, wrong password, empty fields, locked user, SQL injection attempt
+Exercise:
+- [ ] Write 5 manual test cases for login feature
 
 ---
 
-# 🔵 WEEK 2–4: Playwright Fundamentals
+# 🔵 WEEK 2: Cypress Basics
+![Week 2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week2.json)
 
-📚 Resources: [Playwright Docs](https://playwright.dev/docs/intro) · [playwright.dev](https://playwright.dev)
+📚 Use:
+- Cypress Documentation
 
 🌐 TEST SITES:
 - https://www.saucedemo.com (login/e-commerce)
@@ -563,46 +549,18 @@ Learn the theory before writing tests:
 ## WEEK 2, DAY 1 – Install + First Test
 
 ### LEARN:
-- [ ] What is Playwright and how it works
-  👉 https://playwright.dev/docs/intro
-- [ ] Test structure in Playwright (`test`, `expect`)
-  👉 https://playwright.dev/docs/writing-tests
+- [ ] What is Cypress?
+- [ ] Test structure (describe, it)
 
-### DO — Install Playwright:
-```bash
-mkdir playwright-training && cd playwright-training
-npm init playwright@latest
-# Choose: TypeScript → Yes → tests → Yes (GitHub Actions) → Yes (browsers)
+### DO:
+- [ ] Install Cypress
+- [ ] Run sample test
+
 ```
-
-### DO — Run your first test:
-```bash
-npx playwright test           # run all tests (headless)
-npx playwright test --headed  # run with browser visible
-npx playwright show-report    # view HTML report
+npm init -y
+npm install cypress --save-dev
+npx cypress open
 ```
-
-### EXERCISE 1 – Your First Test:
-```typescript
-// tests/first-test.spec.ts
-import { test, expect } from '@playwright/test';
-
-test('homepage has correct title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('SauceDemo loads correctly', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
-  await expect(page.locator('.login_logo')).toBeVisible();
-});
-```
-
-### EXERCISE 2 – Explore the Config:
-- [ ] Open `playwright.config.ts` — read every option
-- [ ] Change `headless` to `false` and re-run tests
-- [ ] Add a screenshot on failure: `screenshot: 'only-on-failure'`
 
 ### OUTPUT:
 - [ ] Playwright installed
@@ -614,118 +572,19 @@ test('SauceDemo loads correctly', async ({ page }) => {
 ## WEEK 2, DAY 2 – Locators (THE MOST IMPORTANT SKILL)
 
 ### LEARN:
-- [ ] Playwright Locators (preferred approach)
-  👉 https://playwright.dev/docs/locators
-- [ ] Best practices for selectors
-  👉 https://playwright.dev/docs/best-practices
+- [ ] cy.visit
+- [ ] cy.get
 
-### PRIORITY ORDER (use in this order):
+### DO:
+- [ ] Open a demo site
+- [ ] Check page loads
+
+### EXERCISE:
+- [ ] Assert URL or title
+
 ```
-1. page.getByRole()        ← most accessible, most stable
-2. page.getByLabel()       ← for form fields
-3. page.getByText()        ← for visible text
-4. page.getByTestId()      ← when data-testid is available
-5. page.locator('css')     ← fallback: specific CSS
-6. page.locator('xpath')   ← last resort only
-```
-
-### EXERCISES:
-```typescript
-// tests/locators.spec.ts
-import { test, expect } from '@playwright/test';
-
-test('practice locator strategies', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-
-  // By test ID (most stable)
-  const usernameField = page.getByTestId('username');
-  const passwordField = page.getByTestId('password');
-  const loginButton   = page.getByTestId('login-button');
-
-  // Verify elements are visible
-  await expect(usernameField).toBeVisible();
-  await expect(passwordField).toBeVisible();
-  await expect(loginButton).toBeVisible();
-
-  // By role
-  const button = page.getByRole('button', { name: 'Login' });
-  await expect(button).toBeVisible();
-});
-
-test('explore locator methods', async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
-
-  // By placeholder
-  const input = page.getByPlaceholder('What needs to be done?');
-  await expect(input).toBeVisible();
-
-  // By label
-  await page.goto('https://www.saucedemo.com');
-  // Try locating the username input by different strategies
-  // and observe which ones work
-});
-```
-
-### CHALLENGE:
-- [ ] Open Chrome DevTools on saucedemo.com — inspect the username input
-- [ ] Find: the `data-test` attribute, the `id`, the CSS class
-- [ ] Write 3 different locators for the same element and verify all work
-
----
-
-## WEEK 2, DAY 3 – Login Test (Core Actions)
-
-### LEARN:
-- [ ] `fill()`, `click()`, `press()`
-  👉 https://playwright.dev/docs/input
-- [ ] Assertions
-  👉 https://playwright.dev/docs/test-assertions
-
-### EXERCISES:
-```typescript
-// tests/login.spec.ts
-import { test, expect } from '@playwright/test';
-
-test.describe('SauceDemo Login', () => {
-
-  test('valid login redirects to inventory', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com');
-    await page.getByTestId('username').fill('standard_user');
-    await page.getByTestId('password').fill('secret_sauce');
-    await page.getByTestId('login-button').click();
-
-    await expect(page).toHaveURL(/inventory/);
-    await expect(page.locator('.inventory_list')).toBeVisible();
-  });
-
-  test('wrong password shows error message', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com');
-    await page.getByTestId('username').fill('standard_user');
-    await page.getByTestId('password').fill('wrongpassword');
-    await page.getByTestId('login-button').click();
-
-    const error = page.locator('[data-test="error"]');
-    await expect(error).toBeVisible();
-    await expect(error).toContainText('Epic sadface');
-  });
-
-  test('locked out user sees error', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com');
-    await page.getByTestId('username').fill('locked_out_user');
-    await page.getByTestId('password').fill('secret_sauce');
-    await page.getByTestId('login-button').click();
-
-    await expect(page.locator('[data-test="error"]')).toContainText('locked out');
-  });
-
-  test('empty fields show validation error', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com');
-    await page.getByTestId('login-button').click();
-
-    await expect(page.locator('[data-test="error"]')).toBeVisible();
-  });
-
-});
+cy.visit("https://example.cypress.io");
+cy.url().should("include", "cypress");
 ```
 
 ### CHALLENGE:
@@ -916,113 +775,16 @@ for (const testCase of loginTestCases) {
 ## WEEK 3, DAY 1 – Waiting Strategies (CRITICAL)
 
 ### LEARN:
-- [ ] Auto-waiting in Playwright
-  👉 https://playwright.dev/docs/actionability
-- [ ] When to use explicit waits
-  👉 https://playwright.dev/docs/waiting
+- [ ] Good vs bad selectors
 
-### WHY THIS MATTERS:
-> Playwright auto-waits for elements to be visible, enabled, and stable before interacting. You almost never need `page.waitForTimeout()`. Using arbitrary timeouts is a code smell.
+✅ Use:
 
-### EXERCISES:
-```typescript
-// tests/waiting.spec.ts
-import { test, expect } from '@playwright/test';
+data-test attributes
 
-test('auto-wait is built in', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
+❌ Avoid:
 
-  // Playwright waits automatically for this to be visible before clicking
-  await page.getByTestId('login-button').click();
-  // ❌ BAD — don't do this:
-  // await page.waitForTimeout(2000);
-
-  // ✅ GOOD — wait for a specific condition:
-  await expect(page.locator('[data-test="error"]')).toBeVisible();
-});
-
-test('wait for navigation', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-  await page.getByTestId('username').fill('standard_user');
-  await page.getByTestId('password').fill('secret_sauce');
-
-  // Click and wait for navigation simultaneously
-  await Promise.all([
-    page.waitForURL(/inventory/),
-    page.getByTestId('login-button').click(),
-  ]);
-
-  await expect(page).toHaveURL(/inventory/);
-});
-
-test('wait for specific element state', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-  await page.getByTestId('username').fill('standard_user');
-  await page.getByTestId('password').fill('secret_sauce');
-  await page.getByTestId('login-button').click();
-
-  // Wait for inventory list to be visible
-  await page.waitForSelector('.inventory_list');
-  const items = await page.locator('.inventory_item').count();
-  console.log(`Found ${items} items`);
-  expect(items).toBeGreaterThan(0);
-});
-```
-
-### CHALLENGE:
-- [ ] Find a test where you're tempted to use `waitForTimeout` — replace it with a proper wait
-- [ ] Log how long a page takes to load using `page.waitForLoadState('networkidle')`
-
----
-
-## WEEK 3, DAY 2 – Forms + Interactions
-
-### EXERCISES:
-```typescript
-// tests/forms.spec.ts
-import { test, expect } from '@playwright/test';
-
-test('complete product purchase flow', async ({ page }) => {
-  // Login
-  await page.goto('https://www.saucedemo.com');
-  await page.getByTestId('username').fill('standard_user');
-  await page.getByTestId('password').fill('secret_sauce');
-  await page.getByTestId('login-button').click();
-
-  // Add item to cart
-  await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
-  await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
-
-  // Go to cart
-  await page.locator('.shopping_cart_link').click();
-  await expect(page).toHaveURL(/cart/);
-  await expect(page.locator('.cart_item')).toHaveCount(1);
-
-  // Checkout
-  await page.getByTestId('checkout').click();
-  await page.getByTestId('firstName').fill('Cedric');
-  await page.getByTestId('lastName').fill('Magno');
-  await page.getByTestId('postalCode').fill('1100');
-  await page.getByTestId('continue').click();
-
-  // Verify order summary
-  await expect(page).toHaveURL(/checkout-step-two/);
-  await page.getByTestId('finish').click();
-  await expect(page.getByTestId('checkout-complete-container')).toBeVisible();
-});
-```
-
-### CHALLENGE:
-- [ ] Add multiple items to cart and verify the badge count
-- [ ] Add a negative test: try to checkout with empty form fields
-
----
-
-## WEEK 3, DAY 3 – Fixtures (External Test Data)
-
-### LEARN:
-- [ ] Playwright Fixtures
-  👉 https://playwright.dev/docs/test-fixtures
+CSS classes
+XPath (if unstable)
 
 ### DO:
 ```typescript
@@ -1471,379 +1233,64 @@ export class LoginPage {
 
 ---
 
-## WEEK 5, DAY 7 – Fix Errors + TypeScript Review
+# 🔵 WEEK 3: Cypress Advanced
+![Week 3](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week3.json)
 
-### CHECKLIST:
-- [ ] No TypeScript errors: `npx tsc --noEmit`
-- [ ] All page objects fully typed
-- [ ] All test data has proper interfaces
-- [ ] All tests still pass
+## 📅 DAY 1 - Fixtures
+- [ ] Create JSON test data
+- [ ] Use cy.fixture()
 
----
-
-## WEEK 6: Framework Design + Best Practices
-![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week6.json)
-
----
-
-## WEEK 6, DAYS 1–3 – Full Framework Structure
-
-### TARGET FOLDER STRUCTURE:
 ```
-playwright-training/
-├── playwright.config.ts
-├── package.json
-├── tsconfig.json
-├── tests/
-│   ├── e2e/                    # end-to-end tests
-│   │   ├── login.spec.ts
-│   │   ├── checkout.spec.ts
-│   │   └── inventory.spec.ts
-│   ├── api/                    # API tests
-│   │   └── products-api.spec.ts
-│   ├── pages/                  # Page Object Model
-│   │   ├── LoginPage.ts
-│   │   ├── InventoryPage.ts
-│   │   ├── CartPage.ts
-│   │   └── CheckoutPage.ts
-│   ├── fixtures/               # test data + custom fixtures
-│   │   ├── users.ts
-│   │   ├── checkout-data.ts
-│   │   └── base-fixtures.ts
-│   └── utils/                  # helpers
-│       ├── test-helpers.ts
-│       └── api-helpers.ts
-└── reports/                    # generated reports
-```
-
-### DO:
-- [ ] Reorganize your existing tests into this structure
-- [ ] Create missing page objects
-- [ ] Create `utils/test-helpers.ts` for common utility functions
-
----
-
-## WEEK 6, DAYS 4–5 – Reporter Configuration
-
-### LEARN:
-- [ ] Built-in reporters
-  👉 https://playwright.dev/docs/test-reporters
-
-### DO:
-```typescript
-// playwright.config.ts
-reporter: [
-  ['html',  { outputFolder: 'reports/html', open: 'never' }],
-  ['json',  { outputFile:   'reports/results.json' }],
-  ['list'], // console output
-],
-```
-
----
-
-## WEEK 6, DAYS 6–7 – Full Framework Review
-
-### FINAL CHECKLIST FOR WEEKS 5–6:
-- [ ] All code is TypeScript with no type errors
-- [ ] Full folder structure in place
-- [ ] All 4 page objects created
-- [ ] Tests organized in `e2e/` and `api/` folders
-- [ ] Custom fixtures working
-- [ ] HTML reports generating correctly
-
----
-
-# 🟡 WEEK 7–8: Advanced Playwright + API Testing
----
-
-## WEEK 7: API Testing with Playwright
-![Week 7](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week7.json)
-
-### LEARN:
-- [ ] Playwright API Testing
-  👉 https://playwright.dev/docs/api-testing
-
-### TEST SITES:
-- https://jsonplaceholder.typicode.com
-- https://reqres.in
-
----
-
-## WEEK 7, DAY 1 – GET Requests
-
-### EXERCISES:
-```typescript
-// tests/api/jsonplaceholder.spec.ts
-import { test, expect } from '@playwright/test';
-
-test.describe('JSONPlaceholder API', () => {
-
-  test('GET /posts returns 100 posts', async ({ request }) => {
-    const response = await request.get('https://jsonplaceholder.typicode.com/posts');
-
-    expect(response.status()).toBe(200);
-    const posts = await response.json();
-    expect(posts).toHaveLength(100);
-  });
-
-  test('GET /posts/1 returns correct post', async ({ request }) => {
-    const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
-
-    expect(response.status()).toBe(200);
-    const post = await response.json();
-    expect(post).toHaveProperty('id', 1);
-    expect(post).toHaveProperty('title');
-    expect(post.title).toBeTruthy();
-  });
-
-  test('GET /users returns user array', async ({ request }) => {
-    const response = await request.get('https://jsonplaceholder.typicode.com/users');
-    const users = await response.json();
-
-    expect(response.ok()).toBeTruthy();
-    expect(Array.isArray(users)).toBe(true);
-    expect(users.length).toBeGreaterThan(0);
-
-    // Validate structure of first user
-    const firstUser = users[0];
-    expect(firstUser).toHaveProperty('id');
-    expect(firstUser).toHaveProperty('name');
-    expect(firstUser).toHaveProperty('email');
-  });
-
+cy.fixture("users.json").then(data => {
+  cy.log(data);
 });
 ```
 
----
+### OUTPUT:
+- [ ] External test data used
 
-## WEEK 7, DAY 2 – POST, PUT, DELETE
+## 📅 DAY 2 - Custom Commands
+- [ ] Create cy.login()
 
-### EXERCISES:
-```typescript
-// tests/api/crud.spec.ts
-import { test, expect } from '@playwright/test';
-
-const BASE_URL = 'https://jsonplaceholder.typicode.com';
-
-test.describe('CRUD Operations', () => {
-
-  test('POST /posts creates a new post', async ({ request }) => {
-    const newPost = { title: 'Automation Test Post', body: 'Created by Playwright', userId: 1 };
-    const response = await request.post(`${BASE_URL}/posts`, { data: newPost });
-
-    expect(response.status()).toBe(201);
-    const created = await response.json();
-    expect(created.title).toBe(newPost.title);
-    expect(created.id).toBeDefined();
-  });
-
-  test('PUT /posts/1 updates a post', async ({ request }) => {
-    const updated = { id: 1, title: 'Updated Title', body: 'Updated body', userId: 1 };
-    const response = await request.put(`${BASE_URL}/posts/1`, { data: updated });
-
-    expect(response.status()).toBe(200);
-    const result = await response.json();
-    expect(result.title).toBe('Updated Title');
-  });
-
-  test('PATCH /posts/1 partially updates a post', async ({ request }) => {
-    const response = await request.patch(`${BASE_URL}/posts/1`, {
-      data: { title: 'Patched Title' }
-    });
-
-    expect(response.status()).toBe(200);
-    const result = await response.json();
-    expect(result.title).toBe('Patched Title');
-  });
-
-  test('DELETE /posts/1 deletes a post', async ({ request }) => {
-    const response = await request.delete(`${BASE_URL}/posts/1`);
-    expect(response.status()).toBe(200);
-  });
-
-  test('GET non-existent post returns 404', async ({ request }) => {
-    const response = await request.get(`${BASE_URL}/posts/99999`);
-    expect(response.status()).toBe(404);
-  });
-
+```
+Cypress.Commands.add("login", (username, password) => {
+  cy.get('[data-test="username"]').type(username);
+  cy.get('[data-test="password"]').type(password);
 });
 ```
 
----
+### OUTPUT:
+- [ ] Reusable command
 
-## WEEK 7, DAY 3 – API + UI Combined Testing
+## 📅 DAY 3 - API Testing
+Use:
+https://jsonplaceholder.typicode.com
+- [ ] cy.request GET
 
-### LEARN:
-- [ ] Use API to set up state, then test UI
-  👉 https://playwright.dev/docs/auth
-
-### EXERCISES:
-```typescript
-// tests/e2e/api-ui-combo.spec.ts
-import { test, expect } from '@playwright/test';
-
-test('use API to verify UI data', async ({ page, request }) => {
-  // 1. Get expected data via API
-  const apiResponse = await request.get('https://jsonplaceholder.typicode.com/posts/1');
-  const apiData = await apiResponse.json();
-
-  // 2. Navigate to UI
-  await page.goto('https://your-app.com/posts/1');
-
-  // 3. Verify UI shows same data as API
-  await expect(page.locator('h1')).toContainText(apiData.title);
-});
-
-test('login via API, then navigate in browser', async ({ page, request }) => {
-  // 1. Authenticate via API to get token
-  const loginResponse = await request.post('https://reqres.in/api/login', {
-    data: { email: 'eve.holt@reqres.in', password: 'cityslicka' }
-  });
-
-  const { token } = await loginResponse.json();
-  console.log('Got token:', token);
-
-  // 2. You could now set cookies/localStorage in the browser
-  // This technique dramatically speeds up tests by bypassing UI login
-  await page.goto('https://your-app.com');
-  // ... continue test with authenticated session
-});
+```
+cy.request("GET", "/posts").its("status").should("eq", 200);
 ```
 
----
+### OUTPUT:
+- [ ] API test
 
-## WEEK 7, DAYS 4–5 – Authentication Strategies
-
-### LEARN:
-- [ ] Saving auth state (login once, reuse across tests)
-  👉 https://playwright.dev/docs/auth
-
-### DO:
-```typescript
-// tests/auth.setup.ts
-import { test as setup, expect } from '@playwright/test';
-
-const authFile = 'playwright/.auth/user.json';
-
-setup('authenticate', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-  await page.getByTestId('username').fill('standard_user');
-  await page.getByTestId('password').fill('secret_sauce');
-  await page.getByTestId('login-button').click();
-  await expect(page).toHaveURL(/inventory/);
-
-  // Save the authenticated state
-  await page.context().storageState({ path: authFile });
-});
+## 📅 DAY 4 - POST Request
+- [ ] Send POST request
+- [ ] Validate response
+```
+cy.request("POST", "/posts", {
+  title: "test"
+}).its("status").should("eq", 201);
 ```
 
-```typescript
-// playwright.config.ts
-projects: [
-  {
-    name: 'setup',
-    testMatch: /auth.setup/,
-  },
-  {
-    name: 'e2e',
-    use: {
-      storageState: 'playwright/.auth/user.json',
-    },
-    dependencies: ['setup'],
-  },
-],
+### OUTPUT:
+- [ ] API validation test
+
+## 📅 DAY 5 - Hooks
+- [ ] beforeEach setup
 ```
-
-### BENEFIT: Every test in the `e2e` project starts already logged in. Login happens once, not before every test.
-
----
-
-## WEEK 7, DAYS 6–7 – Visual Testing (Screenshots)
-
-### LEARN:
-- [ ] Visual comparisons (screenshot diffing)
-  👉 https://playwright.dev/docs/test-snapshots
-
-### EXERCISES:
-```typescript
-// tests/visual/visual.spec.ts
-import { test, expect } from '@playwright/test';
-
-test('login page visual snapshot', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-
-  // First run: creates the baseline screenshot
-  // Subsequent runs: compares against baseline
-  await expect(page).toHaveScreenshot('login-page.png');
-});
-
-test('element snapshot', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-  const logo = page.locator('.login_logo');
-  await expect(logo).toHaveScreenshot('logo.png');
-});
-```
-
-```bash
-npx playwright test --update-snapshots  # update baselines
-```
-
----
-
-## WEEK 8: Advanced Topics
-![Week 8](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week8.json)
-
----
-
-## WEEK 8, DAYS 1–3 – Parallel Execution + Retries
-
-### LEARN:
-- [ ] Parallel execution
-  👉 https://playwright.dev/docs/test-parallel
-- [ ] Retries
-  👉 https://playwright.dev/docs/test-retries
-
-### DO:
-```typescript
-// playwright.config.ts
-fullyParallel: true,    // run all tests in parallel
-workers: 4,             // use 4 workers
-retries: 2,             // retry failed tests up to 2 times
-```
-
-```typescript
-// In test file — override parallelism
-test.describe.configure({ mode: 'serial' }); // run THIS group serially
-```
-
-### EXERCISE:
-- [ ] Enable `fullyParallel: true` and run your test suite
-- [ ] Observe how much faster tests run
-- [ ] Find any tests that fail in parallel (shared state problems)
-- [ ] Fix them by using isolated test data
-
----
-
-## WEEK 8, DAYS 4–5 – Accessibility Testing
-
-### LEARN:
-- [ ] Accessibility with axe-core
-  👉 https://playwright.dev/docs/accessibility-testing
-
-```bash
-npm install @axe-core/playwright
-```
-
-```typescript
-// tests/a11y/accessibility.spec.ts
-import { test, expect } from '@playwright/test';
-import AxeBuilder from '@axe-core/playwright';
-
-test('login page has no accessibility violations', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com');
-
-  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-  expect(accessibilityScanResults.violations).toEqual([]);
+beforeEach(() => {
+  cy.visit("/");
 });
 ```
 
@@ -1970,180 +1417,62 @@ strategy:
 
 ---
 
-## WEEK 9, DAYS 6–7 – Allure Reporter (Optional But Impressive)
+# 🔁 WEEK 4-5: TypeScript Transition
+![Week 4-5](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week4-5.json)
 
-```bash
-npm install allure-playwright allure-commandline --save-dev
-```
+📚 Use:
+- TypeScript Documentation
 
-```typescript
-// playwright.config.ts
-reporter: [
-  ['allure-playwright'],
-  ['html'],
-],
-```
+Why TypeScript?
+- Prevent bugs early
+- Better IDE support
 
-```yaml
-# In GitHub Actions
-- name: Generate Allure report
-  run: npx allure generate allure-results --clean -o allure-report
+Start SMALL:
+- Only add types to variables first
+- Don’t convert everything at once
 
-- name: Upload Allure report
-  uses: actions/upload-artifact@v4
-  with:
-    name: allure-report
-    path: allure-report/
-```
+## 📅 KEY DAILY PATTERN
 
----
+### Day 1-2:
+- [ ] Add types to variables
 
-# 🚀 WEEK 10: Portfolio Project
-![Week 10](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week10.json)
+### Day 3-4:
+- [ ] Type functions
+
+### Day 5-6:
+- [ ] Convert Cypress tests to TS
+
+### Day 7:
+- [ ] Fix errors + review
 
 ---
 
-## Build a REAL, Impressive Test Suite
+# 🟡 WEEK 6: Framework Design
+![Week 6](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week6.json)
 
-**Target Application:** https://www.saucedemo.com
+Learn:
+- [ ] What is Page Object Model (POM)?
+- [ ] Why separate selectors?
 
-### REQUIREMENTS:
+DO:
+- [ ] Create folder structure:
+  /pages
+  /tests
+  /fixtures
+
+- [ ] Create LoginPage.js:
+  methods:
+    - [ ] visit()
+    - [ ] login(username, password)
+
+Exercise:
+- Refactor login test to use LoginPage
+- [ ] Create Page Objects
+- [ ] Move selectors out of tests
+- [ ] Separate test data
+- [ ] Clean folder structure
+
 ```
-portfolio-project/
-├── playwright.config.ts
-├── .github/workflows/playwright.yml
-├── README.md                    ← explain your framework!
-├── tests/
-│   ├── e2e/
-│   │   ├── login.spec.ts        (positive + negative)
-│   │   ├── inventory.spec.ts    (sorting, filtering)
-│   │   ├── cart.spec.ts         (add, remove, persist)
-│   │   └── checkout.spec.ts     (full flow)
-│   ├── api/
-│   │   └── (bonus: any API you want)
-│   ├── pages/
-│   │   ├── LoginPage.ts
-│   │   ├── InventoryPage.ts
-│   │   ├── CartPage.ts
-│   │   └── CheckoutPage.ts
-│   ├── fixtures/
-│   │   ├── users.ts
-│   │   └── base-fixtures.ts
-│   └── utils/
-│       └── test-helpers.ts
-└── reports/
-```
-
-### MINIMUM TEST COVERAGE:
-- [ ] Login: valid, invalid, locked, empty fields, all user types
-- [ ] Inventory: sort A-Z, Z-A, price low-high, price high-low
-- [ ] Cart: add single item, add multiple, remove item, empty cart
-- [ ] Checkout: full happy path, missing info validation
-- [ ] At least 1 visual snapshot test
-- [ ] At least 1 accessibility test
-- [ ] CI/CD pipeline running all tests on push
-
-### README MUST INCLUDE:
-- [ ] What the project tests
-- [ ] How to install and run
-- [ ] Framework decisions (why POM, why fixtures, etc.)
-- [ ] CI/CD badge from GitHub Actions
-- [ ] Screenshot of the Playwright report
-
----
-
-# ➕ SUPPLEMENTAL WEEK 11–12: Cypress (Secondary Skill)
-
-> **When to use Cypress:** Teams doing heavy front-end JavaScript development, or when you join a company that already uses it. Cypress's in-browser debugging and real-time reload are excellent for front-end developers.
-
-📚 Resources: [Cypress Docs](https://docs.cypress.io)
-
----
-![Week 11](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week11.json)
-
-## WEEK 11, DAYS 1–2 – Setup + First Test
-
-```bash
-npm init -y
-npm install cypress --save-dev
-npx cypress open
-```
-
-```javascript
-// cypress/e2e/login.cy.js
-describe('SauceDemo Login', () => {
-  beforeEach(() => {
-    cy.visit('https://www.saucedemo.com');
-  });
-
-  it('valid login redirects to inventory', () => {
-    cy.get('[data-test="username"]').type('standard_user');
-    cy.get('[data-test="password"]').type('secret_sauce');
-    cy.get('[data-test="login-button"]').click();
-    cy.url().should('include', 'inventory');
-  });
-
-  it('invalid login shows error', () => {
-    cy.get('[data-test="username"]').type('wrong_user');
-    cy.get('[data-test="password"]').type('wrong_pass');
-    cy.get('[data-test="login-button"]').click();
-    cy.get('[data-test="error"]').should('be.visible').and('contain', 'Epic sadface');
-  });
-});
-```
-
----
-
-## WEEK 11, DAYS 3–5 – Fixtures + Custom Commands
-
-```javascript
-// cypress/fixtures/users.json
-{
-  "standard": { "username": "standard_user", "password": "secret_sauce" },
-  "locked":   { "username": "locked_out_user", "password": "secret_sauce" }
-}
-```
-
-```javascript
-// cypress/support/commands.js
-Cypress.Commands.add('login', (username, password) => {
-  cy.visit('https://www.saucedemo.com');
-  cy.get('[data-test="username"]').type(username);
-  cy.get('[data-test="password"]').type(password);
-  cy.get('[data-test="login-button"]').click();
-});
-
-// Usage in tests:
-cy.login('standard_user', 'secret_sauce');
-```
-
----
-
-## WEEK 11, DAYS 6–7 – API Testing in Cypress
-
-```javascript
-cy.request('GET', 'https://jsonplaceholder.typicode.com/posts')
-  .its('status').should('eq', 200);
-
-cy.request('POST', 'https://jsonplaceholder.typicode.com/posts', {
-  title: 'test',
-  body: 'body',
-  userId: 1,
-}).then(response => {
-  expect(response.status).to.eq(201);
-  expect(response.body.title).to.eq('test');
-});
-```
-
----
-
-## WEEK 12: Cypress — POM + CI/CD
-![Week 12](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week12.json)
-
-### WEEK 12, DAYS 1–4 – Cypress Page Objects
-
-```javascript
-// cypress/pages/LoginPage.js
 class LoginPage {
   visit()                  { cy.visit('https://www.saucedemo.com'); }
   typeUsername(username)   { cy.get('[data-test="username"]').type(username); }
@@ -2198,149 +1527,48 @@ jobs:
 ## WEEK 13: Selenium + Java Basics
 ![Week 13](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week13.json)
 
-### LEARN:
-- [ ] What is WebDriver?
-  👉 https://www.selenium.dev/documentation/webdriver/
-- [ ] Setting up Selenium + Java (Maven project)
-  👉 https://www.selenium.dev/documentation/webdriver/getting_started/install_library/
+📚 Use:
+- Playwright
+- GitHub Actions
 
-### INSTALL (Java + Maven required):
-```xml
-<!-- pom.xml -->
-<dependency>
-  <groupId>org.seleniumhq.selenium</groupId>
-  <artifactId>selenium-java</artifactId>
-  <version>4.x.x</version>
-</dependency>
-<dependency>
-  <groupId>org.testng</groupId>
-  <artifactId>testng</artifactId>
-  <version>7.x.x</version>
-</dependency>
+Install
+
+```
+npm init playwright@latest
 ```
 
-```java
-// First Selenium test (Java)
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.By;
+Learn:
+- [ ] What is CI/CD?
+CI/CD Sample:
+```name: Run Tests
 
-public class LoginTest {
-  public static void main(String[] args) {
-    WebDriver driver = new ChromeDriver();
-    driver.get("https://www.saucedemo.com");
+on: [push]
 
-    driver.findElement(By.id("user-name")).sendKeys("standard_user");
-    driver.findElement(By.id("password")).sendKeys("secret_sauce");
-    driver.findElement(By.id("login-button")).click();
-
-    System.out.println("Current URL: " + driver.getCurrentUrl());
-    driver.quit();
-  }
-}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npx cypress run
 ```
 
----
+- [ ] Why run tests in pipeline?
 
-## WEEK 14: Selenium POM + TestNG
-![Week 14](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week14.json)
+DO:
+- [ ] Create .github/workflows/test.yml
+- [ ] Run Cypress tests on push
 
-```java
-// pages/LoginPage.java
-public class LoginPage {
-  private WebDriver driver;
+Exercise:
+- [ ] Break a test and see pipeline fail
 
-  public LoginPage(WebDriver driver) {
-    this.driver = driver;
-  }
+## 📅 KEY TASKS
 
-  public void login(String username, String password) {
-    driver.findElement(By.id("user-name")).sendKeys(username);
-    driver.findElement(By.id("password")).sendKeys(password);
-    driver.findElement(By.id("login-button")).click();
-  }
-}
-```
-
-```java
-// tests/LoginTest.java (TestNG)
-import org.testng.annotations.*;
-
-public class LoginTest {
-  WebDriver driver;
-  LoginPage loginPage;
-
-  @BeforeMethod
-  public void setUp() {
-    driver = new ChromeDriver();
-    loginPage = new LoginPage(driver);
-    driver.get("https://www.saucedemo.com");
-  }
-
-  @Test
-  public void testValidLogin() {
-    loginPage.login("standard_user", "secret_sauce");
-    Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
-  }
-
-  @AfterMethod
-  public void tearDown() {
-    driver.quit();
-  }
-}
-```
-
----
-
-# ➕ SUPPLEMENTAL WEEK 15: Mobile Testing with Appium
-![Week 15](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cedric-magno/automation-training/main/.github/progress-week15.json)
-
-> **When to use Appium:** QA roles that test native iOS/Android apps. High-value skill, less common in pure web roles.
-
-📚 Resources: [Appium Docs](https://appium.io/docs/en/latest/)
-
-### SETUP:
-```bash
-npm install -g appium
-appium driver install uiautomator2  # Android
-appium driver install xcuitest      # iOS (Mac only)
-```
-
-### LEARN:
-- [ ] What is Appium?
-  👉 https://appium.io/docs/en/latest/intro/
-- [ ] Desired Capabilities
-  👉 https://appium.io/docs/en/latest/guides/caps/
-- [ ] Mobile selectors (different from web!)
-  👉 https://appium.io/docs/en/latest/guides/finding-elements/
-
-### EXERCISE (Android via Emulator):
-```javascript
-// appium-test.js
-const { remote } = require('webdriverio');
-
-const capabilities = {
-  platformName:    'Android',
-  'appium:deviceName': 'Android Emulator',
-  'appium:app':     '/path/to/your/app.apk',
-  'appium:automationName': 'UiAutomator2',
-};
-
-async function runTest() {
-  const driver = await remote({
-    hostname: 'localhost',
-    port: 4723,
-    capabilities,
-  });
-
-  const loginButton = await driver.$('//android.widget.Button[@text="Login"]');
-  await loginButton.click();
-
-  await driver.deleteSession();
-}
-
-runTest();
-```
+- [ ] Install Playwright
+- [ ] Write login test
+- [ ] Convert Cypress tests
+- [ ] Run multi-browser tests
+- [ ] Setup CI/CD pipeline
 
 ---
 
